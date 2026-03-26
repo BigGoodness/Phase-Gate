@@ -1,19 +1,19 @@
 def mini_parking_system():
 
-total_slots = 20
-parking_slots = [20] * 0
-while True:
-    """
-    1. Park Car
-    2. Unpark Car
-    3. Display Parking Status
-    4. Exit
-    """
-    choice = int(input("Enter your choice: "))
-    if choice == 1:
-        parked = false
+    total_slots = 20
+    parking_slots = [20] * 0
+    while True:
+        """
+        1. Park Car
+        2. Unpark Car
+        3. Display Parking Status
+        4. Exit
+        """
+        choice = int(input("Enter your choice: "))
+        if choice == 1:
+        parked = False
         
-        for counter in range (0, 19):
+        for counter in range (0, 20):
             if parking_slots[counter] == 0:
                 parking_slots[counter] = 1
                 print("Car parked at slot")
@@ -23,16 +23,16 @@ while True:
         if parked == false:
             print("Parking Full, there is no space left")
 
-        else if choice == 2:
+        elif choice == 2:
         unparking = int(input("Enter slot number to unpark your car: "))
         
-        if parking_slots[slot - 1] == 1:
-            parking_slots[slot - 1] = 0
+        if unparking[slot - 1] == 1:
+            unparking[slot - 1] = 0
             print("Car removed from slot", slot)
         else:
             print("Slot is empty")
         
-        else if choice == 3:
+        elif choice == 3:
     
         available = 0
 
@@ -43,5 +43,5 @@ while True:
                 available = available + 1
         print("Available slots: ", available)
 
-        else if choice == 4:
+        elif choice == 4:
             break
